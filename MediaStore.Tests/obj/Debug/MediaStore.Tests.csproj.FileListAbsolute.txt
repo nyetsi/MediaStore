@@ -1,0 +1,14 @@
+C:\_Development\Learning\SOLID\MediaStore\MediaStore.Tests\bin\Debug\MediaStore.Tests.dll
+C:\_Development\Learning\SOLID\MediaStore\MediaStore.Tests\bin\Debug\MediaStore.Tests.pdb
+C:\_Development\Learning\SOLID\MediaStore\MediaStore.Tests\bin\Debug\MediaStore.Data.dll
+C:\_Development\Learning\SOLID\MediaStore\MediaStore.Tests\bin\Debug\NSubstitute.dll
+C:\_Development\Learning\SOLID\MediaStore\MediaStore.Tests\bin\Debug\nunit.framework.dll
+C:\_Development\Learning\SOLID\MediaStore\MediaStore.Tests\bin\Debug\Dapper.dll
+C:\_Development\Learning\SOLID\MediaStore\MediaStore.Tests\bin\Debug\MediaStore.Data.pdb
+C:\_Development\Learning\SOLID\MediaStore\MediaStore.Tests\bin\Debug\NSubstitute.xml
+C:\_Development\Learning\SOLID\MediaStore\MediaStore.Tests\bin\Debug\nunit.framework.xml
+C:\_Development\Learning\SOLID\MediaStore\MediaStore.Tests\bin\Debug\Dapper.pdb
+C:\_Development\Learning\SOLID\MediaStore\MediaStore.Tests\bin\Debug\Dapper.xml
+C:\_Development\Learning\SOLID\MediaStore\MediaStore.Tests\obj\Debug\MediaStore.Tests.csprojResolveAssemblyReference.cache
+C:\_Development\Learning\SOLID\MediaStore\MediaStore.Tests\obj\Debug\MediaStore.Tests.dll
+C:\_Development\Learning\SOLID\MediaStore\MediaStore.Tests\obj\Debug\MediaStore.Tests.pdb

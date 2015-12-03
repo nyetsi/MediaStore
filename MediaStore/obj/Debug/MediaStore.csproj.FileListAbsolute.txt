@@ -1,0 +1,6 @@
+C:\_Development\Learning\SOLID\MediaStore\MediaStore\bin\MediaStore.dll.config
+C:\_Development\Learning\SOLID\MediaStore\MediaStore\bin\MediaStore.dll
+C:\_Development\Learning\SOLID\MediaStore\MediaStore\bin\MediaStore.pdb
+C:\_Development\Learning\SOLID\MediaStore\MediaStore\obj\Debug\MediaStore.csprojResolveAssemblyReference.cache
+C:\_Development\Learning\SOLID\MediaStore\MediaStore\obj\Debug\MediaStore.dll
+C:\_Development\Learning\SOLID\MediaStore\MediaStore\obj\Debug\MediaStore.pdb

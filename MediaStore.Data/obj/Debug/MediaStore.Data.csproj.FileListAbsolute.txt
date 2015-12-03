@@ -1,0 +1,8 @@
+C:\_Development\Learning\SOLID\MediaStore\MediaStore.Data\obj\Debug\MediaStore.Data.csprojResolveAssemblyReference.cache
+C:\_Development\Learning\SOLID\MediaStore\MediaStore.Data\bin\Debug\MediaStore.Data.dll
+C:\_Development\Learning\SOLID\MediaStore\MediaStore.Data\bin\Debug\MediaStore.Data.pdb
+C:\_Development\Learning\SOLID\MediaStore\MediaStore.Data\bin\Debug\Dapper.dll
+C:\_Development\Learning\SOLID\MediaStore\MediaStore.Data\bin\Debug\Dapper.pdb
+C:\_Development\Learning\SOLID\MediaStore\MediaStore.Data\bin\Debug\Dapper.xml
+C:\_Development\Learning\SOLID\MediaStore\MediaStore.Data\obj\Debug\MediaStore.Data.dll
+C:\_Development\Learning\SOLID\MediaStore\MediaStore.Data\obj\Debug\MediaStore.Data.pdb
