@@ -10,9 +10,12 @@ namespace MediaStore.Data.DataModels
     public class Media
     {
         public int Id { get; set; }
+        public int MediaTypeId { get; set; }
         public string Title { get; set; }
         public DateTime ReleaseDate { get; set; }
+        public int CoverArtId { get; set; }
         public Art CoverArt { get; set; }
+        public DateTime CreatedDate { get; set; }
     }
 
     public class Art

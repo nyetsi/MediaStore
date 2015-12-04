@@ -27,8 +27,7 @@ namespace MediaStore.Core.Services
 
         public IEnumerable<Book> GetMediaList(MediaType type)
         {
-            var typeId = (int) type;
-            return _context.GetAll<Book>(typeId);
+            return _context.GetAll<Book>(QueryFactory.GetAllBooks, (int) MediaType.Book);
         }
 
         public Book GetMediaById(int id)

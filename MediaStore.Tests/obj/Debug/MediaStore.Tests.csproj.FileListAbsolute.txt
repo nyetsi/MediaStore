@@ -12,3 +12,5 @@ C:\_Development\Learning\SOLID\MediaStore\MediaStore.Tests\bin\Debug\Dapper.xml
 C:\_Development\Learning\SOLID\MediaStore\MediaStore.Tests\obj\Debug\MediaStore.Tests.csprojResolveAssemblyReference.cache
 C:\_Development\Learning\SOLID\MediaStore\MediaStore.Tests\obj\Debug\MediaStore.Tests.dll
 C:\_Development\Learning\SOLID\MediaStore\MediaStore.Tests\obj\Debug\MediaStore.Tests.pdb
+C:\_Development\Learning\SOLID\MediaStore\MediaStore.Tests\bin\Debug\MediaStore.Core.dll
+C:\_Development\Learning\SOLID\MediaStore\MediaStore.Tests\bin\Debug\MediaStore.Core.pdb

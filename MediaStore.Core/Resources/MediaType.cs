@@ -8,8 +8,8 @@ namespace MediaStore.Core.Resources
 {
     public enum MediaType
     {
-        Book,
-        Cd,
-        Dvd
+        Book = 1,
+        Cd = 2,
+        Dvd = 3
     }
 }

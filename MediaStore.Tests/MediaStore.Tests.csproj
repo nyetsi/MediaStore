@@ -55,6 +55,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\MediaStore.Core\MediaStore.Core.csproj">
+      <Project>{3E8148F4-41FF-4FBF-BB21-0709834DFDD2}</Project>
+      <Name>MediaStore.Core</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MediaStore.Data\MediaStore.Data.csproj">
       <Project>{091C0AFC-20D3-416A-AF8F-4D0B4E94567D}</Project>
       <Name>MediaStore.Data</Name>
