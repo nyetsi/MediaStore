@@ -44,12 +44,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DatabaseConnect.cs" />
     <Compile Include="DataContext.cs" />
     <Compile Include="DataModels\Book.cs" />
     <Compile Include="DataModels\Cd.cs" />
     <Compile Include="DataModels\Dvd.cs" />
     <Compile Include="DataModels\Media.cs" />
+    <Compile Include="IDataContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QueryFactory.cs" />
   </ItemGroup>

@@ -1,39 +1,67 @@
 ﻿using System;
 using System.Linq;
+using System.Runtime.InteropServices;
 using MediaStore.Core.Resources;
 using MediaStore.Data;
 using MediaStore.Data.DataModels;
+using NSubstitute.Core;
+using NSubstitute.ReturnsExtensions;
 using NUnit.Framework;
+using NSubstitute;
 
 namespace MediaStore.Tests
 {
     [TestFixture]
     public class BookTests
     {
-        private DataContext _context;
+        private IDataContext _context;
+        private string _type;
 
         [SetUp]
         public void Setup()
         {
-            _context = new DataContext();
+            _context = Substitute.For<IDataContext>();
+            _type = "Book";
         }
 
         [Test]
-        public void For_Get_All_Books_Given_Type_Book_Should_Return_Collection_Of_Books()
+        public void For_GetAllBooks_Given_TypeBook_Should_ReturnCollectionOfBooks()
         {
-            var books = _context.GetAll<Book>(QueryFactory.GetAllBooks, (int) MediaType.Book);
-            Assert.AreEqual(true, books.Any());
+            string query = QueryFactory.GetAll(_type);
+            var books = _context.GetAll<Book>(query);
+
+            _context.Received().GetAll<Book>(query);
         }
 
         [Test]
-        public void For_Insert_Book_Given_Object_Should_Return_Identity_Int()
+        public void For_InsertBook_Given_Object_Should_ReturnInserted_RecordId()
         {
-            var viewModel = new Media() { MediaTypeId = (int)MediaType.Cd, Title = "Me and my friends", ReleaseDate = new DateTime(2007, 10, 14), CoverArtId = 0, CreatedDate = DateTime.Now };
-            int mediaId = _context.CreateMedia(QueryFactory.CreateMedia, viewModel);
+            var viewModel = MockData();
+            int mediaId = _context.Create(QueryFactory.CreateMedia, viewModel);
+
             Assert.IsInstanceOf<int>(mediaId);
+        }
 
-            var bookModel = new Book() { Id = mediaId, Author = "Matt Damon", ISBN = "1666-254-22", Publisher = "Matt Publishers" };
-            _context.Create(QueryFactory.CreateBook, bookModel);
+        [Test]
+        public void For_GetBookById_Given_BookId_ShouldReturn_BookObject()
+        {
+            string query = QueryFactory.FindById(_type);
+            var result = _context.FindById<Book>(query, 1);
+
+            _context.IsCompatibleWith(typeof (Book));
+            _context.Received().FindById<Book>(query, 1);
+        }
+
+        private static Media MockData()
+        {
+            return new Media()
+            {
+                MediaTypeId = (int) MediaType.Cd,
+                Title = "Me and my friends",
+                ReleaseDate = new DateTime(2007, 10, 14),
+                CoverArtId = 0,
+                CreatedDate = DateTime.Now
+            };
         }
     }
 }

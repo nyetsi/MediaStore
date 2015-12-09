@@ -1,43 +1,32 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
-using MediaStore.Core.Interface;
+﻿using System.Collections.Generic;
 using MediaStore.Core.Resources;
 using MediaStore.Data;
 using MediaStore.Data.DataModels;
 
 namespace MediaStore.Core.Services
 {
-    public class BookService : IMedia<Book>
+    public class BookService : DataContext
     {
-        private DataContext _context;
-        public DataContext Context
+        private readonly MediaType _type = MediaType.Book;
+
+        public BookService(MediaType type)
         {
-            get { return _context ?? (_context = new DataContext()); }
-            set { _context = value; }
+            _type = type;
         }
 
-        public void AddMedia(Book media)
+        public IEnumerable<Book> GetAllBooks()
         {
-            throw new NotImplementedException();
+            return GetAll<Book>(QueryFactory.GetAll(_type.ToString()));
         }
 
-        public IEnumerable<Book> GetMediaList(MediaType type)
+        public int Create(Book book)
         {
-            return _context.GetAll<Book>(QueryFactory.GetAllBooks, (int) MediaType.Book);
+            return Create(QueryFactory.CreateBook, book);
         }
 
-        public Book GetMediaById(int id)
+        public Book GetBookById(int id)
         {
-            throw new NotImplementedException();
-        }
-
-        public IEnumerable<Book> GetAllMediaByType(MediaType type)
-        {
-            throw new NotImplementedException();
+            return FindById<Book>(QueryFactory.FindById(_type.ToString()), id);
         }
     }
 }

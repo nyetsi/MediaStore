@@ -3,19 +3,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MediaStore.Data.DataModels;
 
 namespace MediaStore.Data
 {
     public class QueryFactory
     {
-        public static string GetAllBooks
+        public static string GetAll(string type)
         {
-            get { return "Select * from Media m inner join Book b on b.Id = m.Id and m.MediaTypeId = "; }
+            return string.Format("Select * from Media m inner join {0} b on b.Id = m.Id", type);
         }
 
-        public static string GetAllCds
+        public static string FindById(string type)
         {
-            get { return "Select * from Media m inner join Cd b on b.Id = m.Id and m.MediaTypeId = "; }
+            return string.Format("Select * from Media m inner join {0} a on m.Id = a.Id where m.Id = @id", type);
         }
 
         public static string CreateMedia
@@ -28,6 +29,14 @@ namespace MediaStore.Data
             }
         }
 
+        public static string CreateBook
+        {
+            get
+            {
+                return "Insert into Book(Id, Author, ISBN, Publisher)" +
+                       "values (@Id, @Author, @ISBN, @Publisher)";
+            }
+        }
         public static string CreateCd
         {
             get
@@ -37,14 +46,5 @@ namespace MediaStore.Data
             }
         }
 
-        public static string CreateBook
-        {
-            get
-            {
-                return "Insert into Book(Id, Author, ISBN, Publisher)" +
-                       "values (@Id, @Author, @ISBN, @Publisher)";
-
-            }
-        }
     }
 }

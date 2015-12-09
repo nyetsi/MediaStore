@@ -39,12 +39,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Interface\IRepository.cs" />
     <Compile Include="Resources\MediaType.cs" />
     <Compile Include="Services\BookService .cs" />
     <Compile Include="Services\CdService.cs" />
     <Compile Include="Services\DvdService.cs" />
-    <Compile Include="Interface\IMedia.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -52,6 +50,9 @@
       <Project>{091c0afc-20d3-416a-af8f-4d0b4e94567d}</Project>
       <Name>MediaStore.Data</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Interface\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

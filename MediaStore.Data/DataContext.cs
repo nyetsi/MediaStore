@@ -11,25 +11,25 @@ using MediaStore.Data.DataModels;
 
 namespace MediaStore.Data
 {
-    public class DataContext
+    public class DataContext : IDataContext
     {
+        //TODO: Move this to config
         private readonly IDbConnection _db =
             new SqlConnection("Data Source=KYOTO\\KYOTO;Initial Catalog=MediaStore;Integrated Security=True");
 
-        public List<T> GetAll<T>(string query, int type)
+        public IEnumerable<T> GetAll<T>(string query)
         {
-            return _db.Query<T>(query + @type).ToList();
+            return _db.Query<T>(query).ToList();
+        }
+        
+        public int Create<T>(string query, T viewModel)
+        {
+            return _db.Query<int>(query, viewModel).Single();
         }
 
-        public int CreateMedia(string query, Media viewModel)
+        public T FindById<T>(string query, int id)
         {
-            int id = _db.Query<int>(query, viewModel).Single();
-            return id;
-        }
-
-        public void Create<T>(string query, T viewModel)
-        {
-            _db.Query<int>(query, viewModel);
+            return _db.Query<T>(query, new {id}).Single();
         }
     }
 }

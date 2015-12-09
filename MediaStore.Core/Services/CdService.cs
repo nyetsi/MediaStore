@@ -1,15 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using MediaStore.Core.Interface;
 using MediaStore.Core.Resources;
+using MediaStore.Data;
 using MediaStore.Data.DataModels;
 
 namespace MediaStore.Core.Services
 {
-    public class CdService:IMedia<Cd>
+    public class CdService:DataContext
     {
         public void AddMedia(Cd media)
         {

@@ -1,11 +1,11 @@
 ﻿using System.Collections.Generic;
-using MediaStore.Core.Interface;
 using MediaStore.Core.Resources;
+using MediaStore.Data;
 using MediaStore.Data.DataModels;
 
 namespace MediaStore.Core.Services
 {
-    public class DvdService : IMedia<Dvd>
+    public class DvdService : DataContext
     {
         public void AddMedia(Dvd media)
         {
